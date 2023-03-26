@@ -1,97 +1,14 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "type": "object",
-  "$metadata": {
-    "uris": {
-      "jsonLdContext": "https://github.com/dreampiper/crystalrohr-issuer/blob/main/proof-of-helper.jsonId",
-      "jsonSchema": "https://github.com/dreampiper/crystalrohr-issuer/blob/main/proof-of-helper.json"
-    }
-  },
-  "required": [
-    "@context",
-    "id",
-    "type",
-    "issuanceDate",
-    "credentialSubject",
-    "credentialSchema",
-    "credentialStatus",
-    "issuer"
-  ],
+  "$id": "https://github.com/dreampiper/crystalrohr-issuer/blob/main/proof-of-helper.json",
+  "$schema": "https://github.com/dreampiper/crystalrohr-issuer/blob/main/proof-of-helper.jsonId",
+  "title": "Vocabulary for Helper type in a json Format",
+  "type": "ProofOfHelp",
   "properties": {
-    "@context": {
-      "type": ["string", "array", "object"]
-    },
-    "id": {
-      "type": "string"
-    },
-    "type": {
-      "type": ["string", "array"],
-      "items": {
-        "type": "string"
-      }
-    },
-    "issuer": {
-      "type": ["string", "object"],
-      "format": "uri",
-      "required": ["id"],
-      "properties": {
-        "id": {
-          "type": "string",
-          "format": "uri"
-        }
-      }
-    },
-    "issuanceDate": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "expirationDate": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "credentialSchema": {
-      "type": "object",
-      "required": ["id", "type"],
-      "properties": {
-        "id": {
-          "type": "string",
-          "format": "uri"
-        },
-        "type": {
-          "type": "string"
-        }
-      }
-    },
-    "subjectPosition": {
-      "type": "string",
-      "enum": ["none", "index", "value"]
-    },
-    "merklizationRootPosition": {
-      "type": "string",
-      "enum": ["none", "index", "value"]
-    },
-    "revNonce": {
-      "type": "integer"
-    },
-    "version": {
-      "type": "integer"
-    },
-    "updatable": {
-      "type": "boolean"
-    },
-    "credentialSubject": {
-      "type": "object",
-      "required": ["id", "entryDate"],
-      "properties": {
-        "id": {
-          "title": "Credential Subject ID",
-          "type": "string",
-          "format": "uri"
-        },
-        "entryDate": {
-          "type": "integer"
-        }
-      }
+    "ProofOfHelp": {
+      "display": "ProofOfHelp",
+      "description": "Have you helped someone on the forum?",
+      "type": "number",
+      "format": "bool"
     }
   }
 }

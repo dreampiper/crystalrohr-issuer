@@ -5,18 +5,18 @@
       "@protected": true,
       "id": "@id",
       "type": "@type",
-      "ProofOfHelper": {
-        "@id": "https://github.com/dreampiper/crystalrohr-issuer/blob/main/proof-of-helper.jsonId#",
+      "ProofOfHelp": {
+        "@id": "https://github.com/dreampiper/crystalrohr-issuer/blob/main/proof-of-helper.jsonId#ProofOfHelp",
         "@context": {
           "@version": 1.1,
           "@protected": true,
           "id": "@id",
           "type": "@type",
-          "vocab": "https://github.com/dreampiper/crystalrohr-issuer/blob/main/proof-of-helper-vocab.md#",
-          "xsd": "http://www.w3.org/2001/XMLSchema#",
-          "entryDate": {
-            "@id": "vocab:entryDate",
-            "@type": "xsd:integer"
+          "poly-vocab": "https://github.com/dreampiper/crystalrohr-issuer/blob/main/proof-of-helper.json",
+          "serialization": "https://github.com/iden3/claim-schema-vocab/blob/main/credentials/serialization.md#",
+          "ProofOfHelp": {
+            "@id": "poly-vocab:ProofOfHelp",
+            "@type": "serialization:IndexDataSlotA"
           }
         }
       }
